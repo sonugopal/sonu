@@ -43,9 +43,9 @@ include "registration.php"
                         <div class="container">
                             <h3>Register</h3>
                             <form action="registration.php" method="post">
-                                Name <br><input type="text" name="name"><br>
+                                Name <br><input type="text" name="name" class="form-control"><br>
                                 Mobile  <br>
-                                <input type="number" name="mobile"><br>
+                                <input type="number" name="mobile" class="form-control"><br>
                                 <div class="form-group" >
                                     <label for="sel1">Blood Group</label>
                                     <select  class="form-control" id="group">
@@ -58,7 +58,7 @@ include "registration.php"
 
                                 <div class="form-group" id="dist" >
                                     <label for="sel1">District</label>
-                                    <select name="district" class="form-control">
+                                    <select name="district" class="form-control" onchange="getid(this.value);">
                                         <?php
                                         $query="select * from district";
                                         $result=mysqli_query($conn,$query);
@@ -66,7 +66,7 @@ include "registration.php"
                                         {
                                             while($row=mysqli_fetch_assoc($result))
                                             {
-                                            echo '<option value="">'.$row["dist_name"].'</option>';
+                                            echo '<option value="$row["id"]">'.$row["dist_name"].'</option>';
                                             }
                                         }
                                         else
@@ -83,7 +83,7 @@ include "registration.php"
 
                                 <div class="form-group" id="town" >
                                     <label for="sel1">Town</label>
-                                    <select class="form-control" >
+                                    <select class="form-control" id="citylist">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -117,6 +117,7 @@ include "registration.php"
                 $('.nav').slideAndSwipe();
             });
         </script>
+       
 
         <!-- Main library -->
         <script src="js/three.min.js"></script>
