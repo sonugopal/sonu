@@ -1,0 +1,72 @@
+@media only screen and (max-width: 768px) {
+    #name{
+        text-align: center;
+        font-size: 30px;
+
+    } 
+}
+@media only screen and (min-width: 768px) {
+    #name{
+
+        font-size: 46px;
+        float: left;
+
+    }
+}
+body {
+    background-color: #fff;
+    margin: 0px;
+    overflow: hidden;
+    font-family:arial;
+    color:#fff;
+}
+
+h1{
+    margin:0;
+}
+
+a {
+    color:#0078ff;
+}
+#canvas{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: #1a1724;               
+}
+.canvas-wrap{
+    position:relative;
+
+}
+div.canvas-content{
+    position:relative;
+    z-index:2000;
+    color:#fff;
+
+
+}
+
+
+
+@font-face {
+    font-family: november;
+    src: url(font/autumninnovember.ttf);
+}
+#name{
+    font-family: november;
+
+
+
+}
+.bar{
+    margin-top: 25px;
+    margin-left: 20px;
+    color: #fff;
+}
+.side{
+    opacity: .8;
+    z-index: 2001;
+}
