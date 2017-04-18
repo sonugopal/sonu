@@ -58,7 +58,7 @@ include "registration.php"
 
                                 <div class="form-group" id="dist" >
                                     <label for="sel1">District</label>
-                                    <select name="district" class="form-control" onchange="getid(this.value);">
+                                    <select name="district" class="form-control">
                                         <?php
                                         $query="select * from district";
                                         $result=mysqli_query($conn,$query);
