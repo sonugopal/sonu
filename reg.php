@@ -17,6 +17,7 @@ include "registration.php"
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
 
 
 
@@ -58,24 +59,27 @@ include "registration.php"
 
                                 <div class="form-group" id="dist" >
                                     <label for="sel1">District</label>
-                                    <select name="district" class="form-control">
+                                    <select name="district" class="form-control" id="district" onchange="getdist(this.value);">
                                         <?php
-                                        $query="select * from district";
-                                        $result=mysqli_query($conn,$query);
-                                        if(mysqli_num_rows($result)>0)
-                                        {
-                                            while($row=mysqli_fetch_assoc($result))
-                                            {
-                                            echo '<option value="$row["id"]">'.$row["dist_name"].'</option>';
-                                            }
-                                        }
-                                        else
-                                        echo '0 result';
-                                        ?>
-                                       
+                                        $value=$_POST['district'];
+                                        $query = "select * from district";
+                                        $result = mysqli_query($conn, $query);
+                                        if (mysqli_num_rows($result) > 0) {
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                
+
+                                                echo '<option value="'.$row['id'].'">'.$row['dist_name'].'</option>';
+                                                
+                                                }
+                                                } else
+                                                echo '0 result';
+                                                ?>
+                                                
+
 
 
                                     </select>
+                                    
 
 
 
@@ -83,11 +87,8 @@ include "registration.php"
 
                                 <div class="form-group" id="town" >
                                     <label for="sel1">Town</label>
-                                    <select class="form-control" id="citylist">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
+                                    <select name="townlist" class="form-control" id="townlist">
+                                        
                                     </select>
 
 
@@ -113,11 +114,11 @@ include "registration.php"
         <script src="js/jquery.slideandswipe.min.js" type="text/javascript"></script>
 
         <script>
-            $(document).ready(function () {
-                $('.nav').slideAndSwipe();
-            });
+                                        $(document).ready(function () {
+                                            $('.nav').slideAndSwipe();
+                                        });
         </script>
-       
+
 
         <!-- Main library -->
         <script src="js/three.min.js"></script>
@@ -132,6 +133,25 @@ include "registration.php"
         <!-- Animated background color -->
 
         <script src="js/color.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+            <script>
+            
+                                        function getdist(val)
+                                        {
+                                        
+                                            
+                                            $.ajax({
+                                                type:"POST",
+                                                url:"getdata.php",
+                                                data:'id='+val,
+                                                succes:function(data){
+                                                    $("#townlist").html(data);
+                                                }
+                                            });
+                                            
+                                             
+                                        }
+        </script>
 
 
     </body>
