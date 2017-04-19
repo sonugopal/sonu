@@ -17,7 +17,7 @@ include "registration.php"
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+
 
 
 
@@ -61,25 +61,25 @@ include "registration.php"
                                     <label for="sel1">District</label>
                                     <select name="district" class="form-control" id="district" onchange="getdist(this.value);">
                                         <?php
-                                        $value=$_POST['district'];
+                                        $value = $_POST['district'];
                                         $query = "select * from district";
                                         $result = mysqli_query($conn, $query);
                                         if (mysqli_num_rows($result) > 0) {
                                             while ($row = mysqli_fetch_assoc($result)) {
-                                                
 
-                                                echo '<option value="'.$row['id'].'">'.$row['dist_name'].'</option>';
-                                                
-                                                }
-                                                } else
-                                                echo '0 result';
-                                                ?>
-                                                
+
+                                                echo '<option value="' . $row['id'] . '">' . $row['dist_name'] . '</option>';
+                                            }
+                                        } else
+                                            echo '0 result';
+                                        ?>
+
 
 
 
                                     </select>
-                                    
+
+
 
 
 
@@ -88,7 +88,7 @@ include "registration.php"
                                 <div class="form-group" id="town" >
                                     <label for="sel1">Town</label>
                                     <select name="townlist" class="form-control" id="townlist">
-                                        
+
                                     </select>
 
 
@@ -134,24 +134,28 @@ include "registration.php"
 
         <script src="js/color.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-            <script>
-            
-                                        function getdist(val)
+        <script>
+
+                                        function getdist(dist)
                                         {
-                                        
-                                            
+
+
                                             $.ajax({
-                                                type:"POST",
-                                                url:"getdata.php",
-                                                data:'id='+val,
-                                                succes:function(data){
+                                                type: "POST",
+                                                url: "getdata.php",
+                                                data: 'dist_id=' + dist,
+                                                succes: function (data) {
                                                     $("#townlist").html(data);
                                                 }
                                             });
-                                            
-                                             
+
+
                                         }
         </script>
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        
+            
+       
 
 
     </body>
