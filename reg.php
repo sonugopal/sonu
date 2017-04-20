@@ -1,5 +1,5 @@
 <?php
-include "registration.php"
+include "connectdb.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,13 +45,13 @@ include "registration.php"
                         <div class="container">
                             <h3>Register</h3>
                             <form action="registration.php" method="post">
-                                Name <br><input type="text" name="name" class="form-control"><br>
+                                Name <br><input type="text" name="name" class="form-control" required><br>
                                 Mobile  <br>
-                                <input type="number" name="mobile" class="form-control"><br>
+                                <input type="number" name="mobile" class="form-control" required><br>
                                 <div class="form-group" >
                                     <label for="sel1">Blood Group</label>
-                                    <select  class="form-control" id="group">
-                                        <option>Blood</option>
+                                    <select name="blood" class="form-control" id="group" required>
+                                        
                                         <?php
                                         $b_query="select * from b_group";
                                         $b_result=mysqli_query($conn,$b_query);
@@ -68,8 +68,8 @@ include "registration.php"
 
                                 <div class="form-group" id="dist" >
                                     <label for="sel1">District</label>
-                                    <select name="district" class="form-control" id="district">
-                                        <option>District</option>
+                                    <select name="district" class="form-control" id="district" required>
+                                        
                                         <?php
                                         
                                         $d_query = "select * from district";
@@ -103,7 +103,7 @@ include "registration.php"
 
 
                                 </div>
-                                <button type="submit" class="btn btn-success submit" >I'm a donor</button>
+                                <button name="submit" type="submit" class="btn btn-success submit" >I'm a donor</button>
 
 
 

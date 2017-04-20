@@ -1,6 +1,6 @@
 <?php
 
-include_once 'registration.php';
+include_once 'connectdb.php';
 if (!empty($_POST["dist_id"])) {
     $dist_id = $_POST["dist_id"];
     $t_query = "select * from town where dist_id=$dist_id";
