@@ -16,6 +16,7 @@ include "registration.php"
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/dropdown.js" type="text/javascript"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -50,25 +51,34 @@ include "registration.php"
                                 <div class="form-group" >
                                     <label for="sel1">Blood Group</label>
                                     <select  class="form-control" id="group">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
+                                        <option>Blood</option>
+                                        <?php
+                                        $b_query="select * from b_group";
+                                        $b_result=mysqli_query($conn,$b_query);
+                                        if(mysqli_num_rows($b_result)){
+                                        while ($row= mysqli_fetch_assoc($b_result)){
+                                            echo '<option value="'.$row['group_id'].'">'.$row['group_name'].'</option>';
+                                        }
+                                        }
+                                        ?>
+                                                
+                                        
                                     </select>
                                 </div>
 
                                 <div class="form-group" id="dist" >
                                     <label for="sel1">District</label>
-                                    <select name="district" class="form-control" id="district" onchange="getdist(this.value);">
+                                    <select name="district" class="form-control" id="district">
+                                        <option>District</option>
                                         <?php
-                                        $value = $_POST['district'];
-                                        $query = "select * from district";
-                                        $result = mysqli_query($conn, $query);
-                                        if (mysqli_num_rows($result) > 0) {
-                                            while ($row = mysqli_fetch_assoc($result)) {
+                                        
+                                        $d_query = "select * from district";
+                                        $d_result = mysqli_query($conn, $d_query);
+                                        if (mysqli_num_rows($d_result) > 0) {
+                                            while ($row = mysqli_fetch_assoc($d_result)) {
 
 
-                                                echo '<option value="' . $row['id'] . '">' . $row['dist_name'] . '</option>';
+                                                echo '<option value="' . $row['dist_id'] . '">' . $row['dist_name'] . '</option>';
                                             }
                                         } else
                                             echo '0 result';
@@ -114,9 +124,9 @@ include "registration.php"
         <script src="js/jquery.slideandswipe.min.js" type="text/javascript"></script>
 
         <script>
-                                        $(document).ready(function () {
-                                            $('.nav').slideAndSwipe();
-                                        });
+            $(document).ready(function () {
+                $('.nav').slideAndSwipe();
+            });
         </script>
 
 
@@ -133,26 +143,9 @@ include "registration.php"
         <!-- Animated background color -->
 
         <script src="js/color.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-        <script>
-
-                                        function getdist(dist)
-                                        {
-
-
-                                            $.ajax({
-                                                type: "POST",
-                                                url: "getdata.php",
-                                                data: 'dist_id=' + dist,
-                                                succes: function (data) {
-                                                    $("#townlist").html(data);
-                                                }
-                                            });
-
-
-                                        }
-        </script>
-        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        
+     
+        
         
             
        
