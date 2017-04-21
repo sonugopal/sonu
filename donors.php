@@ -1,27 +1,19 @@
-
 <?php
-include 'connectdb.php';
-
+include "connectdb.php"
 ?>
 <?php
-if(isset($_POST['submit'])){
-    $name=$_POST["name"];
-    $mobile=$_POST["mobile"];
-    $district=$_POST['district'];
-    $town=$_POST['townlist'];
-    $blood=$_POST['blood'];
-    
-    
+if (isset($_POST['submit'])) {
 
-    
-    $insert="insert into user values(null,'$name',$mobile,'$blood',$town,$district)";
-    $insquery= mysqli_query($conn, $insert);
-    
+
+    $district = $_POST['district'];
+    $town = $_POST['townlist'];
+    $blood = $_POST['blood'];
 }
-
-        
 ?>
-
+<?php
+$b_query = "select * from user where town_id=$town && group_id=$blood && dist_id=$district";
+$result = mysqli_query($conn, $b_query);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -71,6 +63,24 @@ if(isset($_POST['submit'])){
                     <div class="container">
                         <div class="col-xs-12">
                             <a href="home.php"><button name="submit" type="submit" class="btn btn-danger" >Back to home</button></a>
+                            <br>
+                            <h3>Donor List</h3>
+                            <table class="table">
+                                <thead>
+                                <td>Name</td>
+                                <td>Mobile</td>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    
+                                    
+                                        while ($row= mysqli_fetch_assoc($result)){
+                                            echo '<tr><td>'.$row['name'].'</td><td>'.$row['ph_no'].'</td></tr>';
+                                        }
+                                        
+                                    ?>
+                                </tbody>
+                            </table>
 
                         </div>
                     </div>
@@ -110,7 +120,4 @@ if(isset($_POST['submit'])){
 
     </body>
 </html>
-
-
-
 

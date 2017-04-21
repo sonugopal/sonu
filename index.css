@@ -70,3 +70,12 @@ div.canvas-content{
     opacity: .8;
     z-index: 2001;
 }
+.align{
+   margin-left: 50px;
+}
+.b_align{
+    margin-left: 100px;
+}
+#para{
+    font-size: 10px;
+}

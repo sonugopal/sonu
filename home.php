@@ -1,5 +1,5 @@
 <?php
-include "registration.php"
+include "connectdb.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,8 @@ include "registration.php"
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/dropdown.js" type="text/javascript"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -24,7 +26,7 @@ include "registration.php"
     <body>
         <nav class="nav side">
 
-            
+
         </nav>
         <section class="canvas-wrap">
             <div class="canvas-content">
@@ -36,6 +38,82 @@ include "registration.php"
                     <div class="col-lg-7 col-xs-8">
                         <h1 id="name"><b>Dishakerala</b></h1>
                     </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p id="para">Don't be terrible about life drops, The all donors in kerala ready to help you, you can find them at anywhere</p>
+
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="container">
+                        <div class="col-xs-12">
+                            <form action="donors.php" method="post">
+                                <div class="form-group" >
+
+                                    <label for="sel1">Blood Group</label>
+                                    <select name="blood" class="form-control b_align" id="group" required>
+
+                                        <?php
+                                        $b_query = "select * from b_group";
+                                        $b_result = mysqli_query($conn, $b_query);
+                                        if (mysqli_num_rows($b_result)) {
+                                            while ($row = mysqli_fetch_assoc($b_result)) {
+                                                echo '<option value="' . $row['group_id'] . '">' . $row['group_name'] . '</option>';
+                                            }
+                                        }
+                                        ?>
+
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group" id="dist" >
+                                    <label for="sel1" class="b_align">District</label>
+                                    <select name="district" class="form-control align" id="district">
+
+                                        <?php
+                                        $d_query = "select * from district";
+                                        $d_result = mysqli_query($conn, $d_query);
+                                        if (mysqli_num_rows($d_result) > 0) {
+                                            while ($row = mysqli_fetch_assoc($d_result)) {
+
+
+                                                echo '<option value="' . $row['dist_id'] . '">' . $row['dist_name'] . '</option>';
+                                            }
+                                        } else
+                                            echo '0 result';
+                                        ?>
+
+
+
+
+                                    </select>
+
+
+
+
+
+                                </div>
+
+                                <div class="form-group" id="town" >
+                                    <label for="sel1" class="b_align">Town</label>
+                                    <select name="townlist" class="form-control align" id="townlist">
+
+                                    </select>
+
+
+                                </div>
+                                <button name="submit" type="submit" class="btn btn-success" >Find Donors</button>
+                            </form>
+                            <br>
+                            <br>
+                            <a href="reg.php"><button name="submit" type="submit" class="btn btn-danger" >Be a donor</button></a>
+
+                        </div>
+                    </div>
+
 
                 </div>
 
