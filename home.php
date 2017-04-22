@@ -4,7 +4,7 @@ include "connectdb.php"
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dishakerala</title>
+        <title>Dhisha kerala</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -36,7 +36,7 @@ include "connectdb.php"
                     </div>
 
                     <div class="col-lg-7 col-xs-8">
-                        <h1 id="name"><b>Dishakerala</b></h1>
+                        <h1 id="name"><b>DhishaKerala</b></h1>
                     </div>
 
                 </div>
@@ -49,10 +49,16 @@ include "connectdb.php"
                 <div class="row text-center">
                     <div class="container">
                         <div class="col-xs-12">
-                            <form action="donors.php" method="post">
+                            <form action="donors.php" method="post" class="find">
+                                <br>
+                                
+                                
+                                <h3>Find donor</h3>
+                                    
+                                    
                                 <div class="form-group" >
 
-                                    <label for="sel1">Blood Group</label>
+                                    
                                     <select name="blood" class="form-control b_align" id="group" required>
 
                                         <?php
@@ -69,9 +75,9 @@ include "connectdb.php"
                                     </select>
                                 </div>
 
-                                <div class="form-group" id="dist" >
-                                    <label for="sel1" class="b_align">District</label>
-                                    <select name="district" class="form-control align" id="district">
+                                <div class="form-group" id="town">
+                                    
+                                    <select name="district" class="form-control" id="district">
 
                                         <?php
                                         $d_query = "select * from district";
@@ -98,23 +104,33 @@ include "connectdb.php"
                                 </div>
 
                                 <div class="form-group" id="town" >
-                                    <label for="sel1" class="b_align">Town</label>
-                                    <select name="townlist" class="form-control align" id="townlist">
+                                    
+                                    <select name="townlist" class="form-control" id="townlist">
 
                                     </select>
 
 
                                 </div>
+                                
                                 <button name="submit" type="submit" class="btn btn-success" >Find Donors</button>
+                                <br>
+                                <br>
                             </form>
                             <br>
                             <br>
-                            <a href="reg.php"><button name="submit" type="submit" class="btn btn-danger" >Be a donor</button></a>
+                            
 
                         </div>
                     </div>
 
 
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12">
+                        <p>Give life drops to people to become a hero<br>Do you interested?</p>
+                        <a href="reg.php"><button name="submit" type="submit" class="btn btn-danger" >Be a donor</button></a>
+                         
+                    </div>
                 </div>
 
 

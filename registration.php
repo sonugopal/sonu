@@ -11,11 +11,18 @@ if(isset($_POST['submit'])){
     $town=$_POST['townlist'];
     $blood=$_POST['blood'];
     
-    
-
-    
+    $check="select * from user where ph_no=$mobile";
+    $ph_check=mysqli_query($conn,$check);
+    if(mysqli_num_rows($ph_check)>0){
+        $status="The given mobile has already registered";
+        
+    }
+    else{
     $insert="insert into user values(null,'$name',$mobile,'$blood',$town,$district)";
     $insquery= mysqli_query($conn, $insert);
+    $status="Registration Success";
+    
+    }
     
 }
 
@@ -25,7 +32,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dishakerala</title>
+        <title>Dhisha kerala</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -57,7 +64,7 @@ if(isset($_POST['submit'])){
                     </div>
 
                     <div class="col-lg-7 col-xs-8">
-                        <h1 id="name"><b>Dishakerala</b></h1>
+                        <h1 id="name"><b>DhishaKerala</b></h1>
                     </div>
 
                 </div>
@@ -70,6 +77,11 @@ if(isset($_POST['submit'])){
                 <div class="row text-center">
                     <div class="container">
                         <div class="col-xs-12">
+                            <br>
+                            <br>
+                            <?php
+                            echo '<h3>'.$status.'</h3>';
+                            ?>
                             <a href="home.php"><button name="submit" type="submit" class="btn btn-danger" >Back to home</button></a>
 
                         </div>

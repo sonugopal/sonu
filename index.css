@@ -52,11 +52,12 @@ div.canvas-content{
 
 
 @font-face {
-    font-family: BeautifulEveryTime;
-    src: url(font/BeautifulEveryTime.ttf);
+    font-family: Theyperished;
+    src: url(font/Theyperished.ttf);
 }
 #name{
-    font-family: BeautifulEveryTime;
+    font-family: calibri;
+     
 
 
 
@@ -70,12 +71,26 @@ div.canvas-content{
     opacity: .8;
     z-index: 2001;
 }
-.align{
-   margin-left: 50px;
+#align{
+   margin-left: auto;
+   margin-right: auto;
+   width: 200px;
 }
 .b_align{
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #para{
-    font-size: 10px;
+    font-size: 14px;
+    color: #4ff798;
+    
+   
+}
+.find{
+    
+    background: rgba(0,0,0,.3);
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
 }
