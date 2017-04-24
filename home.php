@@ -25,13 +25,16 @@ include "connectdb.php"
     </head>
     <body>
         <nav class="nav side">
-
+            <br>
+            <br>
+            <a href="login.php"><button class="btn btn-primary">Admin login</button></a>
+            
 
         </nav>
         <section class="canvas-wrap">
             <div class="canvas-content">
                 <div class="row">
-                    <div class="hidden-lg col-xs-2">
+                    <div class="col-xs-2">
                         <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>
                     </div>
 
@@ -60,6 +63,7 @@ include "connectdb.php"
 
                                     
                                     <select name="blood" class="form-control b_align" id="group" required>
+                                        <option value="">  --Select Group--</option>
 
                                         <?php
                                         $b_query = "select * from b_group";
@@ -77,7 +81,8 @@ include "connectdb.php"
 
                                 <div class="form-group" id="town">
                                     
-                                    <select name="district" class="form-control" id="district">
+                                    <select name="district" class="form-control" id="district" required>
+                                        <option value="">--Select district--</option>
 
                                         <?php
                                         $d_query = "select * from district";
@@ -105,7 +110,8 @@ include "connectdb.php"
 
                                 <div class="form-group" id="town" >
                                     
-                                    <select name="townlist" class="form-control" id="townlist">
+                                    <select name="townlist" class="form-control" id="townlist" required>
+                                        <option value="">--Select Town--</option>
 
                                     </select>
 

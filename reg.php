@@ -26,7 +26,7 @@ include "connectdb.php"
     <body>
         <nav class="nav side">
 
-            <
+            
         </nav>
         <section class="canvas-wrap">
             <div class="canvas-content">
@@ -51,6 +51,7 @@ include "connectdb.php"
                                 <div class="form-group" >
                                     <label for="sel1">Blood Group</label>
                                     <select name="blood" class="form-control" id="group" required>
+                                        <option value="">--Select Group--</option>
                                         
                                         <?php
                                         $b_query="select * from b_group";
@@ -69,6 +70,7 @@ include "connectdb.php"
                                 <div class="form-group" id="dist" >
                                     <label for="sel1">District</label>
                                     <select name="district" class="form-control" id="district" required>
+                                        <option value="">--District--</option>
                                         
                                         <?php
                                         
@@ -97,7 +99,8 @@ include "connectdb.php"
 
                                 <div class="form-group" id="dist" >
                                     <label for="sel1">Town</label>
-                                    <select name="townlist" class="form-control" id="townlist">
+                                    <select name="townlist" class="form-control" id="townlist" required="">
+                                        <option value="">--Town--</option>
 
                                     </select>
 
