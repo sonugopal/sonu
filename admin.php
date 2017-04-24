@@ -17,7 +17,7 @@ include 'connectdb.php';
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/dropdown.js" type="text/javascript"></script>
+        
         <script src="js/admin.js" type="text/javascript"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,9 +32,9 @@ include 'connectdb.php';
                         <br>
                         
                         
-                        <button class="btn btn-primary" onclick="add_town()">Add town</button>
+                        <h3 style="color: #487fd6">Add town</h3>
                             <div id="tow">
-                                <form action="admin.php">
+                                <form method="post">
                                 <select name="district" class="form-control" id="district" required>
                                         <option value="">--Select district--</option>
 
@@ -50,7 +50,13 @@ include 'connectdb.php';
                                         } else
                                             echo '0 result';
                                         ?>
-                                    </select>
+                                </select>
+                                    Type town name:<br>
+                                    <input type="text" name="town_name" class="form-control" id="town_name" required>
+                                    <button type="submit" name="add_t" class="btn btn-success" id="add_t">Add Town</button>
+                                    <p id="status"></p>
+                                        
+                                    
                                 </form>
                                 
                             </div>
