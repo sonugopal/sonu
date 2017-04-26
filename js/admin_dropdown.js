@@ -1,8 +1,11 @@
+
+
+
 $(document).ready(function(){
     
     
-    $('#district').on('change', function(){
-   var selected = $('#district').val();
+    $('#dist_list').on('change', function(){
+   var selected = $('#dist_list').val();
    
    
    
@@ -16,7 +19,7 @@ $(document).ready(function(){
         success: function(data, textStatus, jqXHR) {
             console.log("succes");
             console.log(data);
-          $("#townlist").html(data);
+          $("#town_list").html(data);
           
         },
         error: function(jqXHR, textStatus, errorThrown) {
