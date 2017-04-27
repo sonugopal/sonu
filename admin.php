@@ -43,8 +43,9 @@ include 'connectdb.php';
                             <button class="btn btn-primary" id="add_user">Add donor</button>
                             <button class="btn btn-danger" id="del_user">Delete donor</button>
                         </div>
+<!--                        add town-->
                         <div id="tow">
-                            <form method="post">
+                            <form >
                                 <select name="district" class="form-control" id="dist" required>
                                     <option value="">--Select district--</option>
 
@@ -62,14 +63,15 @@ include 'connectdb.php';
                                     ?>
                                 </select>
                                 Type town name:<br>
-                                <input type="text" name="town_name" class="form-control" id="town_name" required>
-                                <button type="submit" name="add_t" class="btn btn-success" id="add_t">Add</button>
+                                <input type="text" name="town_name" class="form-control" id="town_n" required>
+                                <button name="add_t" class="btn btn-success" id="add_t">Add</button>
                                 <p id="status"></p>
 
 
                             </form>
 
                         </div>
+<!--                        delete town-->
                         <div id="del_tow">
                             <form method="post">
                                 
@@ -114,6 +116,7 @@ include 'connectdb.php';
                                 <button type="submit" class="btn btn-success" id="del">Delete</button>
                             </form>
                         </div>
+<!-- add user                       -->
                         <div id="user_add">
                             <form  method="post">
                                 Name <br><input type="text" name="name" class="form-control" id="name" required><br>
@@ -187,6 +190,8 @@ include 'connectdb.php';
                             </form>
                             
                         </div>
+<!--                        //delete user-->
+                        
                         <div id="user_del">
                             <br>
                             <form method="post">

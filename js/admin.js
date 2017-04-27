@@ -45,8 +45,8 @@ $(document).ready(function(){
     
     
     $('#add_t').on('click', function(){
-   var selected = $('#district').val();
-   var town = $('#town_name').val();
+   var selected = $('#dist').val();
+   var town = $('#town_n').val();
    
    
    
@@ -61,7 +61,7 @@ $(document).ready(function(){
         success: function(data, textStatus, jqXHR) {
             console.log("success");
             console.log(data);
-            $("#status").html(data);
+            
             
             $("#town_name").focus();
             
@@ -113,42 +113,7 @@ $(document).ready(function(){
 });
 
 //add donor
-$(document).ready(function(){
-    
-    
-    $('#add_t').on('click', function(){
-   var selected = $('#district').val();
-   var town = $('#town_name').val();
-   
-   
-   
-   $.ajax({
-        url: "add_town.php",
-        method: "POST",
-        data: {
-                "dist_id": selected,
-                "town": town
-            },
-        
-        success: function(data, textStatus, jqXHR) {
-            console.log("success");
-            console.log(data);
-            $("#status").html(data);
-            
-            $("#town_name").focus();
-            
-          
-          
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log("error");
-        }
-    });
-   
-});
-});
 
-//delete town
 $(document).ready(function(){
     
     
