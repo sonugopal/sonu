@@ -9,11 +9,7 @@ if (!empty($_POST["town"])) {
     $result=mysqli_query($conn,$query);
     
     
-    
-
-    
 }
-else    
-    echo 'failed';
+
 
 ?>

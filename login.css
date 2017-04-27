@@ -1,5 +1,5 @@
 body{
-    background: rgb(168, 38, 84);
+    background: #2c7c6e;
 }
 .butt button{
     width: 78px;
@@ -8,12 +8,12 @@ body{
 }
 #tow{
     display: none;
-    
-    
+
+
 }
 #del_tow{
     display: none;
-    
+
 }
 #user_add{
     display: none;
@@ -23,4 +23,10 @@ body{
 }
 .admin{
     color: #fff;
+}
+#logout{
+    font-size: 18px;
+    float:right;
+    color: #fff;
+    margin-top: 5px;
 }

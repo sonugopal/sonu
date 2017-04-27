@@ -47,8 +47,12 @@ include 'connectdb.php';
                         if(mysqli_num_rows($result)<1){
                             echo 'Username or password entered incorrect';
                         }
-                        else
+                        else{
+                            session_start();
+                            $_SESSION['user']=$user;
+                            $_SESSION['password']=$pass;
                             header('location:admin.php');
+                        }
                         }
                         
                             

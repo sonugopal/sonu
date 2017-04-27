@@ -61,15 +61,17 @@ $(document).ready(function(){
         success: function(data, textStatus, jqXHR) {
             console.log("success");
             console.log(data);
+            $('#status').html(data);
             
             
-            $("#town_name").focus();
+            $("#town_n").focus();
             
           
           
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log("error");
+            
         }
     });
    

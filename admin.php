@@ -1,6 +1,11 @@
 
 <?php
 include 'connectdb.php';
+session_start();
+if(!isset($_SESSION['password'])){
+    
+header("location:home.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +37,14 @@ include 'connectdb.php';
             <div class="row admin">
                 <div class="container">
                     <div class="col-xs-12">
-                        <h1>Admin Pannel</h1>
+                        <div class="row">
+                            <h1 style="float: left">Admin Pannel</h1>
+                        <a href="logout.php" id="logout">logout</a>
+                        </div>
                         <br>
 
 
-                        <h3 style="color: #487fd6">Add town</h3>
+                        
                         <div class="row border-bottom-0 butt">
                             <button class="btn btn-primary" id="add_town">Add town</button>
                             <button class="btn btn-danger" id="del_town">Delete town</button>
