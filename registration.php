@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dhisha kerala</title>
+        <title>Registration</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -63,8 +63,11 @@ if(isset($_POST['submit'])){
                         <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>
                     </div>
 
-                    <div class="col-lg-7 col-xs-8">
-                        <h1 id="name"><b>DhishaKerala</b></h1>
+                    <div class="col-xs-7">
+                        <h1 id="name"><b>DhishaLifeDrops</b></h1>
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/logo2.png" id="logo">
                     </div>
 
                 </div>

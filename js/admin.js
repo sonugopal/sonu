@@ -1,6 +1,4 @@
-function add_town(){
-    document.getElementById('tow').style.display='block';
-}
+
 
 $(document).ready(function(){
     $("#add_town").on('click',function(){
@@ -71,7 +69,7 @@ $(document).ready(function(){
         },
         error: function(jqXHR, textStatus, errorThrown) {
             console.log("error");
-            
+            $('#status').html(data);
         }
     });
    

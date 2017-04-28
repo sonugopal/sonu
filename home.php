@@ -38,8 +38,11 @@ include "connectdb.php"
                         <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>
                     </div>
 
-                    <div class="col-lg-7 col-xs-8">
-                        <h1 id="name"><b>DhishaKerala</b></h1>
+                    <div class="col-xs-7">
+                        <h1 id="name"><b>DhishaLifeDrops</b></h1>
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/logo2.png" id="logo">
                     </div>
 
                 </div>

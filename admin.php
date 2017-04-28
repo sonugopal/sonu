@@ -42,6 +42,7 @@ header("location:home.php");
                         <a href="logout.php" id="logout">logout</a>
                         </div>
                         <br>
+                        <p id="status"></p>
 
 
                         
@@ -73,7 +74,7 @@ header("location:home.php");
                                 Type town name:<br>
                                 <input type="text" name="town_name" class="form-control" id="town_n" required>
                                 <button name="add_t" class="btn btn-success" id="add_t">Add</button>
-                                <p id="status"></p>
+                                
 
 
                             </form>

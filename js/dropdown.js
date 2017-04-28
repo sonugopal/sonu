@@ -3,6 +3,7 @@ $(document).ready(function(){
     
     $('#district').on('change', function(){
    var selected = $('#district').val();
+   $('#load').show();
    
    
    
@@ -17,6 +18,7 @@ $(document).ready(function(){
             console.log("succes");
             console.log(data);
           $("#townlist").html(data);
+          $('#load').hide();
           
         },
         error: function(jqXHR, textStatus, errorThrown) {

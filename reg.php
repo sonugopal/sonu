@@ -4,7 +4,7 @@ include "connectdb.php"
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dhisha Kerala</title>
+        <title>Register as Donor</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -35,8 +35,11 @@ include "connectdb.php"
                         <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>
                     </div>
 
-                    <div class="col-lg-7 col-xs-8">
-                        <h1 id="name"><b>DhishaKerala</b></h1>
+                    <div class="col-xs-7">
+                        <a href="home.php"><h1 id="name"><b>DhishaLifeDrops</b></h1></a>
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/logo2.png" id="logo">
                     </div>
 
                 </div>
@@ -103,6 +106,7 @@ include "connectdb.php"
                                         <option value="">--Town--</option>
 
                                     </select>
+                                    <img src="img/loading.gif" id="load">
 
 
                                 </div>

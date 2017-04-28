@@ -17,7 +17,7 @@ $result = mysqli_query($conn, $b_query);
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dhisha Kerala</title>
+        <title>Donor List</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -48,8 +48,11 @@ $result = mysqli_query($conn, $b_query);
                         <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>
                     </div>
 
-                    <div class="col-lg-7 col-xs-8">
-                        <h1 id="name"><b>DhishaKerala</b></h1>
+                    <div class="col-xs-7">
+                        <h1 id="name"><b>DhishaLifeDrops</b></h1>
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/logo2.png" id="logo">
                     </div>
 
                 </div>
@@ -61,16 +64,16 @@ $result = mysqli_query($conn, $b_query);
                 </div>
                 <div class="row text-center">
                     <div class="container">
-                        <div class="col-xs-12">
+                        <div class="col-xs-12 tab">
                             <a href="home.php"><button name="submit" type="submit" class="btn btn-danger" >Back to home</button></a>
                             <br>
                             <h3>Donor List</h3>
-                            <table class="table">
+                            <table class="table" id="tab">
                                 <thead>
                                 <td>Name</td>
                                 <td>Mobile</td>
                                 </thead>
-                                <tbody>
+                                <tbody id="td">
                                     <?php
                                     
                                     
