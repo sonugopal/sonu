@@ -47,7 +47,7 @@ include "connectdb.php"
                     <div class="col-xs-12">
                         <div class="container">
                             <h3>Register</h3>
-                            <form action="registration.php" method="post">
+                            <form action="verify_otp.php" method="post">
                                 Name <br><input type="text" name="name" class="form-control" required><br>
                                 Mobile  <br>
                                 <input type="number" name="mobile" class="form-control" required><br>

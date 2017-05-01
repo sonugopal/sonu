@@ -25,9 +25,11 @@ include "connectdb.php"
     </head>
     <body>
         <nav class="nav side">
+            <div class="container">
             <br>
             <br>
-            <a href="login.php"><button class="btn btn-primary">Admin login</button></a>
+            <a href="login.php" class="login"><button class="btn btn-primary login">Admin login</button></a>
+            </div>
             
 
         </nav>

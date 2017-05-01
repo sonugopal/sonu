@@ -69,7 +69,7 @@ div.canvas-content{
     color: #fff;
 }
 .side{
-    opacity: .9;
+    opacity: 1;
     z-index: 2001;
 }
 #align{
@@ -111,7 +111,8 @@ div.canvas-content{
 }
 .tab{
     overflow: auto;
-    height: 400px;
+    height: 450px;
+    
 }
 #logo{
     width: 100%;
@@ -121,4 +122,12 @@ div.canvas-content{
 }
 #load{
     display: none;
+}
+.heading{
+    color:green;
+}
+.login{
+    margin-left: 60px;
+    
+    
 }

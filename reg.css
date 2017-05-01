@@ -24,3 +24,9 @@
 #login{
     background: red;
 }
+#hide{
+    display: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
