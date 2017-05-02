@@ -61,6 +61,7 @@ $blood=$_SESSION['blood'];
                         <div class="col-xs-12">
                             <br>
                             <br>
+                            <div id="otp_form">
                             <p style="text-align: center">The Given otp has been sent to your given mobile number</p>
                             <form action="register.php" method="post">
                                 <h4 style="text-align: center">4 Digit OTP</h4>
@@ -69,6 +70,7 @@ $blood=$_SESSION['blood'];
                                 <button type="submit" class="btn btn-success" name="verify">Submit</button>
 
                             </form>
+                            </div>
                             <br>
                             <h3 id="hide">Registration successfull...</h3>
                             <br>
@@ -87,7 +89,7 @@ $blood=$_SESSION['blood'];
                                     
                                     $query="delete from otp";
                                     $del_otp=mysqli_query($conn,$query);
-                                    echo "<script type='text/javascript'>document.getElementById('hide').style.display='block'</script>";
+                                    echo "<script type='text/javascript'>document.getElementById('hide').style.display='block'; document.getElementById('otp_form').style.display='none';</script>";
                                     
                                 } else {
                                     

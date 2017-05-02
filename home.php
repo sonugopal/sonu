@@ -28,7 +28,7 @@ include "connectdb.php"
             <div class="container">
             <br>
             <br>
-            <a href="login.php" class="login"><button class="btn btn-primary login">Admin login</button></a>
+            <a href="login.php"><button class="btn btn-primary" id="log_in">Admin login</button></a>
             </div>
             
 
@@ -141,6 +141,14 @@ include "connectdb.php"
                         <p>Give life drops to people to become a hero<br>Do you interested?</p>
                         <a href="reg.php"><button name="submit" type="submit" class="btn btn-danger" >Be a donor</button></a>
                          
+                    </div>
+                </div
+                <div class="row">
+                    <div class="col-xs-12 text-center" id="details">
+                        
+                        <p>dhishalifedrops@gmail.com</p>
+                        <p>Mob:7736239097,9400630581</p>
+                        <a href="https://www.facebook.com/search/top/?q=dhisha%20kerala"><p>dhishakerala@facebook.com</p></a>
                     </div>
                 </div>
 
