@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['town'] = $town;
     $_SESSION['blood'] = $blood;
 
+
     //verify otp
 
 
@@ -32,13 +33,15 @@ if (isset($_POST['submit'])) {
         echo '<script type=text/javascript>window.alert("The given mobile number has been already registered")</script>';
 
         header('location:reg.php');
-    } else {
+    } 
+}
 
         //Your authentication key
         $authKey = "150002AZFP9V8Yh58fcf044";
+        session_start();
 
 //Multiple mobiles numbers separated by comma
-        $mobileNumber = "$mobile";
+        $mobileNumber = $_SESSION['mobile'];
 
 //Sender ID,While using route4 sender id should be 6 characters long.
         $senderId = "DHISHA";
@@ -91,8 +94,8 @@ if (isset($_POST['submit'])) {
         }
 
         curl_close($ch);
-    }
-}
+    
+
 if($output!=0){
     header('location:register.php');
     

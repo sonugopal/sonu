@@ -70,6 +70,7 @@ $blood=$_SESSION['blood'];
                                 <button type="submit" class="btn btn-success" name="verify">Submit</button>
 
                             </form>
+                            <a href="verify_otp.php"><p>Resend OTP</p></a>
                             </div>
                             <br>
                             <h3 id="hide">Registration successfull...</h3>
@@ -89,6 +90,7 @@ $blood=$_SESSION['blood'];
                                     
                                     $query="delete from otp";
                                     $del_otp=mysqli_query($conn,$query);
+                                    session_destroy();
                                     echo "<script type='text/javascript'>document.getElementById('hide').style.display='block'; document.getElementById('otp_form').style.display='none';</script>";
                                     
                                 } else {
