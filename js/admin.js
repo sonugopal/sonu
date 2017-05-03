@@ -1,7 +1,7 @@
 
 
 $(document).ready(function () {
-    $("#add_town").on('click', function () {
+    $("#add_tow").on('click', function () {
         $("#tow").show();
         $("#del_tow").hide();
         $("#user_add").hide();
@@ -11,7 +11,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $("#del_town").on('click', function () {
+    $("#del_to").on('click', function () {
         $("#del_tow").show();
         $("#tow").hide();
         $("#user_add").hide();
@@ -62,14 +62,14 @@ $(document).ready(function () {
                 $('#status').html(data);
 
 
-                $("#town_n").focus();
+               
 
 
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log("error");
-                $('#status').html(data);
+               
             }
         });
 
@@ -97,6 +97,7 @@ $(document).ready(function () {
             success: function (data, textStatus, jqXHR) {
                 console.log("success");
                 console.log(data);
+                $('#stat').html(data);
 
 
 
@@ -120,7 +121,7 @@ $(document).ready(function () {
     $('#add_d').on('click', function () {
         var town = $('#town_list').val();
         var dist = $('#dist_list').val();
-        var name = $('#name').val();
+        var name = $('#d_name').val();
         var mob = $('#mob').val();
         var blood = $('#blood').val();
 
@@ -144,6 +145,7 @@ $(document).ready(function () {
             success: function (data, textStatus, jqXHR) {
                 console.log("success");
                 console.log(data);
+                $('#msg').html(data);
 
 
 
@@ -172,7 +174,8 @@ $(document).ready(function () {
             },
             success: function (data, textStatus, jqXHR) {
                 console.log("success");
-                console.log(data);
+                
+                $('#message').html(data);
 
             },
             error: function (jqXHR, textStatus, errorThrown) {

@@ -139,3 +139,12 @@ div.canvas-content{
     margin-top: 30px;
     
 }
+#details a{
+    color: #7cffff;
+}
+#details p{
+    line-height: 10px;
+}
+#marg{
+    margin-top: 1px;
+}

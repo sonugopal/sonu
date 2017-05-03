@@ -47,6 +47,13 @@ include "connectdb.php"
                     <div class="col-xs-12">
                         <div class="container">
                             <h3>Register</h3>
+<!--                            //check mobile number already registerd-->
+                            <?php
+                            session_start();
+                            if(!empty($_SESSION['err'])){
+                                echo '<script>alert("The given mobile number has already registered")</script>';
+                            }
+                            ?>
                             <form action="verify_otp.php" method="post">
                                 Name <br><input type="text" name="name" class="form-control" required><br>
                                 Mobile  <br>

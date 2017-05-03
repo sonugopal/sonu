@@ -12,14 +12,26 @@ if(!empty($_POST['mob'])){
     $ph_check=mysqli_query($conn,$check);
     if(mysqli_num_rows($ph_check)>0){
         $status="The given mobile has already registered";
+        echo $status;
         
     }
     else{
     $insert="insert into user values(null,'$name',$mobile,'$blood',$town,$district)";
     $insquery= mysqli_query($conn, $insert);
     $status="Registration Success";
+    if($insquery){
+    $s='New donor added';
+    }
+    else{
+        $s="Adding new donor failed";
+    }
+    echo $s;
+   
+        
+    
     
     }
+     
     
 }
 ?>

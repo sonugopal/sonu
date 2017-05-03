@@ -40,21 +40,36 @@ if (!isset($_SESSION['password'])) {
                         <div class="row">
                             <h1 style="float: left">Admin Pannel</h1>
                             <a href="logout.php" id="logout">logout</a>
+                            
+                        </div>
+                        <div class="row">
+                            <?php
+                            $query="select * from user";
+                            $total=mysqli_query($conn,$query);
+                            $num=mysqli_num_rows($total);
+                            echo '<h5>Total Donors:'.$num.'</h5>';
+                            ?>
                         </div>
                         <br>
-                        <p id="status"></p>
+                        
 
 
 
                         <div class="row border-bottom-0 butt">
-                            <button class="btn btn-primary" id="add_town">Add town</button>
-                            <button class="btn btn-danger" id="del_town">Delete town</button>
+                            <button class="btn btn-primary" id="add_tow">Add town</button>
+                            <button class="btn btn-danger" id="del_to">Delete town</button>
                             <button class="btn btn-primary" id="add_user">Add donor</button>
                             <button class="btn btn-danger" id="del_user">Delete donor</button>
                         </div>
+                        <?php
+                        if(!empty($_SESSION['t_add'])){
+                            $status=$_SESSION['t_add'];
+//                            echo '<script>alert("'.$status.'")</script>';
+                        }
+                        ?>
                         <!--                        add town-->
                         <div id="tow">
-                            <form >
+                           
                                 <select name="district" class="form-control" id="dist" required>
                                     <option value="">--Select district--</option>
 
@@ -72,19 +87,22 @@ if (!isset($_SESSION['password'])) {
                                     ?>
                                 </select>
                                 Type town name:<br>
-                                <input type="text" name="town_name" class="form-control" id="town_n" required>
+                                <input type="text" name="town_n" class="form-control" id="town_n" required>
                                 <button name="add_t" class="btn btn-success" id="add_t">Add</button>
+                                <br>
+                                <h4 id="status"></h4>
 
 
 
-                            </form>
+                            
 
                         </div>
                         <!--                        delete town-->
                         <div id="del_tow">
-                            <form method="post">
+                            
+                            <h3 id="stat"></h3>
 
-                                <div class="form-group" id="town">
+                                <div class="form-group">
 
                                     <select name="district" class="form-control" id="district" required>
                                         <option value="">--Select district--</option>
@@ -106,6 +124,7 @@ if (!isset($_SESSION['password'])) {
 
 
                                     </select>
+                                    
 
 
 
@@ -113,7 +132,7 @@ if (!isset($_SESSION['password'])) {
 
                                 </div>
 
-                                <div class="form-group" id="town" >
+                                <div class="form-group" >
 
                                     <select name="townlist" class="form-control" id="townlist" required>
                                         <option value="">--Select Town--</option>
@@ -123,17 +142,19 @@ if (!isset($_SESSION['password'])) {
 
                                 </div>
                                 <button type="submit" class="btn btn-success" id="del">Delete</button>
-                            </form>
+                                <h4 id="status"></h4>
+                            
                         </div>
                         <!-- add user                       -->
                         <div id="user_add">
-                            <form  method="post">
-                                Name <br><input type="text" name="name" class="form-control" id="name" required><br>
+                            
+                            <h4 id="msg"></h4>
+                                Name <br><input type="text" name="name" class="form-control" id="d_name" required><br>
                                 Mobile  <br>
                                 <input type="number" name="mobile" class="form-control" id="mob" required><br>
                                 <div class="form-group" >
                                     <label for="sel1">Blood Group</label>
-                                    <select name="blood" class="form-control" id="group blood" required>
+                                    <select name="blood" class="form-control" id="blood" required>
                                         <option value="">--Select Group--</option>
 
                                         <?php
@@ -189,20 +210,21 @@ if (!isset($_SESSION['password'])) {
 
                                 </div>
                                 <button name="submit" type="submit" class="btn btn-success submit" id="add_d">Add donor</button>
+                                
 
 
 
 
 
-
-                            </form>
+                            
 
                         </div>
                         <!--                        //delete user-->
 
                         <div id="user_del">
                             <br>
-                            <form method="post">
+                            <h4 id="message"></h4>
+
                                 Enter mobile number:<br>
                                 <input list="browser" name="mobi_no" class="form-control" id="mobi">
                                 <datalist id="browser">
@@ -225,7 +247,8 @@ if (!isset($_SESSION['password'])) {
 <!--                                Enter mobile number:<br>
                                 <input type="number" class="form-control" id="mobi" required>-->
                                 <button type="submit" id="del_d" class="btn btn-success">Delete</button>
-                            </form>
+                                <h4 id="status"></h4>
+                            
                         </div>
                     </div>
 

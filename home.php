@@ -136,14 +136,14 @@ include "connectdb.php"
 
 
                 </div>
-                <div class="row text-center">
+                <div class="row text-center marg">
                     <div class="col-xs-12">
                         <p>Give life drops to people to become a hero<br>Do you interested?</p>
                         <a href="reg.php"><button name="submit" type="submit" class="btn btn-danger" >Be a donor</button></a>
                          
                     </div>
                 </div
-                <div class="row">
+                <div class="row" id="marg">
                     <div class="col-xs-12 text-center" id="details">
                         
                         <p>dhishalifedrops@gmail.com</p>

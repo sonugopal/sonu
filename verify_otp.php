@@ -8,13 +8,14 @@
 <?php
 
 include 'connectdb.php';
-//check mobile already registered
+
 if (isset($_POST['submit'])) {
     $name = $_POST["name"];
     $mobile = $_POST["mobile"];
     $district = $_POST['district'];
     $town = $_POST['townlist'];
     $blood = $_POST['blood'];
+    
     //start session
     session_start();
     $_SESSION['name'] = $name;
@@ -24,21 +25,26 @@ if (isset($_POST['submit'])) {
     $_SESSION['blood'] = $blood;
 
 
-    //verify otp
+    
 
 
-    $check = "select * from user where ph_no=$mobile";
+    
+}
+session_start();
+$mobile=$_SESSION['mobile'];
+$check = "select * from user where ph_no=$mobile";
     $ph_check = mysqli_query($conn, $check);
     if (mysqli_num_rows($ph_check) > 0) {
-        echo '<script type=text/javascript>window.alert("The given mobile number has been already registered")</script>';
+        $_SESSION['err']=1;
 
         header('location:reg.php');
     } 
-}
+    else
+    {
 
         //Your authentication key
         $authKey = "150002AZFP9V8Yh58fcf044";
-        session_start();
+        
 
 //Multiple mobiles numbers separated by comma
         $mobileNumber = $_SESSION['mobile'];
@@ -103,6 +109,7 @@ if($output!=0){
 else
     echo 'Something went wrong..'
     . 'Try again';
+    }
 ?>
 </body>
     

@@ -7,8 +7,11 @@ if (!empty($_POST["town"])) {
     $name=$_POST['town'];
     $query="insert into town values(NULL,'$name',$dist_id)";
     $result=mysqli_query($conn,$query);
-    $s='success';
+    if($result){
+    $s='New town added';
     echo $s;
+    }
+    
     
 }
 
