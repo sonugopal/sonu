@@ -24,15 +24,15 @@ include "connectdb.php"
 
     </head>
     <body>
-        <nav class="nav side">
+<!--        <nav class="nav side">
 
             
-        </nav>
+        </nav>-->
         <section class="canvas-wrap">
             <div class="canvas-content">
                 <div class="row">
                     <div class="hidden-lg col-xs-2">
-                        <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>
+<!--                        <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>-->
                     </div>
 
                     <div class="col-xs-7">
@@ -51,7 +51,8 @@ include "connectdb.php"
                             <?php
                             session_start();
                             if(!empty($_SESSION['err'])){
-                                echo '<script>alert("The given mobile number has already registered")</script>';
+                                echo '<p style="color:red">"The given mobile number has already registered"</p>';
+                                session_destroy();
                             }
                             ?>
                             <form action="verify_otp.php" method="post">

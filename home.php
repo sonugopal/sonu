@@ -29,6 +29,15 @@ include "connectdb.php"
             <br>
             <br>
             <a href="login.php"><button class="btn btn-primary" id="log_in">Admin login</button></a>
+            <div class="row">
+                <form action="user_login.php" method="post">
+                    <h5 style="color:white">You can delete your contact detail from list</h5>
+                    <input type="number" name="ph" class="form-control" placeholder="Enter Mobile number">
+                    <br>
+                    
+                    <button type="submit" name="enter" class="btn btn-danger">Enter</button>
+                </form>
+            </div>
             </div>
             
 

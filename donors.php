@@ -39,15 +39,15 @@ $result = mysqli_query($conn, $b_query);
 
     </head>
     <body>
-        <nav class="nav side">
+<!--        <nav class="nav side">
 
 
-        </nav>
+        </nav>-->
         <section class="canvas-wrap">
             <div class="canvas-content">
                 <div class="row">
                     <div class="hidden-lg col-xs-2">
-                        <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>
+<!--                        <a href="#" class="ssm-toggle-nav" title="open nav"><i class="fa fa-bars bar fa-lg" aria-hidden="true"></i></a>-->
                     </div>
 
                     <div class="col-xs-7">
