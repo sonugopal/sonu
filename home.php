@@ -153,11 +153,15 @@ include "connectdb.php"
                     </div>
                 </div
                 <div class="row" id="marg">
+                    
                     <div class="col-xs-12 text-center" id="details">
                         
                         <p>dhishalifedrops@gmail.com</p>
                         <p>Mob:7736239097,9400630581</p>
                         <a href="https://www.facebook.com/search/top/?q=dhisha%20kerala"><p>dhishakerala@facebook.com</p></a>
+                    </div>
+                    <div class="row">
+                        <a href="https://msg91.com/startups/?utm_source=startup-banner"><img src="https://msg91.com/images/startups/msg91Badge.png" width="120" height="90" title="MSG91 - SMS for Startups" alt="Bulk SMS - MSG91"></a>
                     </div>
                 </div>
 

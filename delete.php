@@ -1,6 +1,10 @@
 <?php
 include 'connectdb.php';
 session_start();
+if(isset($_POST['delete'])){
+    
+
+
 
         $authKey = "150002AZFP9V8Yh58fcf044";
         
@@ -59,6 +63,7 @@ session_start();
         }
 
         curl_close($ch);
+}
     
 
 

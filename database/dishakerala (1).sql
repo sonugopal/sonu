@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2017 at 09:42 AM
+-- Generation Time: May 09, 2017 at 02:01 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `username`, `password`) VALUES
-(1, 'dhisha', '12345');
+(1, 'dhisha', 'human');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,8 @@ INSERT INTO `b_group` (`group_id`, `group_name`) VALUES
 (5, 'O+ve'),
 (6, 'O-ve'),
 (7, 'AB+ve'),
-(8, 'AB-ve');
+(8, 'AB-ve'),
+(9, 'Bombay');
 
 -- --------------------------------------------------------
 
@@ -106,6 +107,13 @@ CREATE TABLE `otp` (
   `otp_code` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `otp`
+--
+
+INSERT INTO `otp` (`otp_id`, `otp_code`) VALUES
+(30, 6362);
+
 -- --------------------------------------------------------
 
 --
@@ -127,7 +135,6 @@ INSERT INTO `town` (`town_id`, `town_name`, `dist_id`) VALUES
 (2, 'Ramanattukara', 11),
 (3, 'Pattambi', 9),
 (4, 'Varkkala', 1),
-(5, 'chemmad', 10),
 (12, 'Mannarkkad', 9),
 (19, 'Perinthalmanna', 10),
 (20, 'Tirur', 10),
@@ -135,28 +142,33 @@ INSERT INTO `town` (`town_id`, `town_name`, `dist_id`) VALUES
 (22, 'Parappanangadi', 10),
 (23, 'Kunnumpuram', 10),
 (24, 'Valanchery', 10),
-(25, 'Majeri', 10),
 (26, 'Nilambur', 10),
 (27, 'Vallikkunnu', 10),
 (28, 'Makkarapparambu', 10),
 (29, 'Kadambuzha', 10),
-(31, 'Angadippuram', 10),
 (32, 'Kuttalur', 10),
 (33, 'Vytilla', 7),
-(34, 'Ponnani', 10),
 (35, 'Ponnani', 10),
 (36, 'Vettichira', 10),
 (37, 'Tirurkad', 10),
 (38, 'Puthanathani', 10),
 (39, 'Cherppulassery', 9),
 (40, 'Pandikkad', 10),
-(41, 'Edappal', 10),
 (42, 'Aluva', 7),
 (43, 'Cochi', 7),
 (44, 'Guruvayoor', 8),
 (45, 'Munnar', 6),
 (46, 'Melattur', 10),
-(47, 'Chattipparambu', 10);
+(48, 'Manjeri', 10),
+(49, 'Kayakkulam', 3),
+(50, 'Koottilangadi', 10),
+(51, 'Pattikkad', 10),
+(52, 'Vailathur', 10),
+(54, 'Shoranur', 9),
+(55, 'Malambuzha', 9),
+(56, 'Thanur', 10),
+(57, 'Chittur', 9),
+(60, 'Irinjalakkuda', 8);
 
 -- --------------------------------------------------------
 
@@ -172,31 +184,6 @@ CREATE TABLE `user` (
   `town_id` int(30) NOT NULL,
   `dist_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `name`, `ph_no`, `group_id`, `town_id`, `dist_id`) VALUES
-(3, 'sonu', 9841475071, 1, 1, 10),
-(4, 'shiju', 9947959360, 5, 1, 10),
-(8, 'sonu', 9847415071, 1, 1, 10),
-(9, 'Swetha G', 8089856698, 3, 1, 10),
-(10, 'Jishnu hari. P', 7736239097, 3, 1, 10),
-(11, 'Binu', 8089854612, 0, 1, 10),
-(12, 'Ravi', 9020, 1, 1, 10),
-(13, 'a', 1, 1, 4, 1),
-(14, 'b', 2, 1, 4, 1),
-(15, 'c', 3, 1, 4, 1),
-(16, 'd', 4, 1, 4, 1),
-(17, 'e', 5, 1, 4, 1),
-(18, 'f', 6, 1, 4, 1),
-(19, 'g', 7, 1, 4, 1),
-(20, 'h', 8, 1, 4, 1),
-(21, 'i', 9, 1, 4, 1),
-(22, 'j', 10, 1, 4, 1),
-(23, 'k', 11, 1, 4, 1),
-(24, 'l', 12, 1, 4, 1);
 
 --
 -- Indexes for dumped tables
@@ -251,7 +238,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `b_group`
 --
 ALTER TABLE `b_group`
-  MODIFY `group_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `group_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `district`
 --
@@ -261,17 +248,17 @@ ALTER TABLE `district`
 -- AUTO_INCREMENT for table `otp`
 --
 ALTER TABLE `otp`
-  MODIFY `otp_id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `otp_id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `town`
 --
 ALTER TABLE `town`
-  MODIFY `town_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `town_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

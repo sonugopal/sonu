@@ -93,7 +93,10 @@ if(isset($_POST['enter'])){
                         $_SESSION['ph']=$ph;
                         
                         ?>
-                        <a href="delete.php"><button class="btn btn-danger">Delete details</button></a>
+                        <form action="delete.php" method="post">
+                            <button class="btn btn-danger" type="submit" name="delete">Delete details</button> 
+                        </form>
+                        
                     </div>
 
 
