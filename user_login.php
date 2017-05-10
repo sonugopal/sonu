@@ -5,7 +5,7 @@ if(isset($_POST['enter'])){
     $check="select * from user where ph_no=$ph";
     $result=mysqli_query($conn,$check);
     if(mysqli_num_rows($result)<1){
-        header('location:home.php');
+        header('location:index.php');
         
     }
     
@@ -48,7 +48,7 @@ if(isset($_POST['enter'])){
                     </div>
 
                     <div class="col-xs-7">
-                        <a href="home.php"><h1 id="name"><b>DhishaLifeDrops</b></h1></a>
+                        <a href="index.php"><h1 id="name"><b>DhishaLifeDrops</b></h1></a>
                     </div>
                     <div class="col-xs-2">
                         <img src="img/logo2.png" id="logo">
@@ -58,7 +58,7 @@ if(isset($_POST['enter'])){
                 <div class="row">
                     <div class="col-xs-12 text-center">
                         <p id="para">Don't be terrible about life drops, The all donors in kerala ready to help you, you can find them at anywhere</p>
-                        <a href="home.php"><button name="submit" type="submit" class="btn btn-success" >Back to home</button></a>
+                        <a href="index.php"><button name="submit" type="submit" class="btn btn-success" >Back to home</button></a>
                     </div>
                 </div>
                 <div class="row text-center">

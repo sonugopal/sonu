@@ -4,7 +4,7 @@ include 'connectdb.php';
 session_start();
 if (!isset($_SESSION['password'])) {
 
-    header("location:home.php");
+    header("location:index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -138,6 +138,7 @@ if (!isset($_SESSION['password'])) {
                                         <option value="">--Select Town--</option>
 
                                     </select>
+                                    <img src="img/loading.gif" id="load">
 
 
                                 </div>
@@ -206,6 +207,7 @@ if (!isset($_SESSION['password'])) {
                                         <option value="">--Town--</option>
 
                                     </select>
+                                    <img src="img/loading.gif" id="load">
 
 
                                 </div>

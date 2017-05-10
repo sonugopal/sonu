@@ -128,6 +128,7 @@ include "connectdb.php"
                                         <option value="">--Select Town--</option>
 
                                     </select>
+                                    <img src="img/loading.gif" id="load">
 
 
                                 </div>

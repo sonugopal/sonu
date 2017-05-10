@@ -36,7 +36,7 @@ include "connectdb.php"
                     </div>
 
                     <div class="col-xs-7">
-                        <a href="home.php"><h1 id="name"><b>DhishaLifeDrops</b></h1></a>
+                        <a href="index.php"><h1 id="name"><b>DhishaLifeDrops</b></h1></a>
                     </div>
                     <div class="col-xs-2">
                         <img src="img/logo2.png" id="logo">

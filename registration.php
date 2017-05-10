@@ -85,7 +85,7 @@ if(isset($_POST['submit'])){
                             <?php
                             echo '<h3>'.$status.'</h3>';
                             ?>
-                            <a href="home.php"><button name="submit" type="submit" class="btn btn-danger" >Back to home</button></a>
+                            <a href="index.php"><button name="submit" type="submit" class="btn btn-danger" >Back to home</button></a>
 
                         </div>
                     </div>

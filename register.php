@@ -100,7 +100,7 @@ $blood=$_SESSION['blood'];
                                 }
                             }
                             ?>
-                            <a href="home.php"><button  class="btn btn-primary">Back to home</button></a>
+                            <a href="index.php"><button  class="btn btn-primary">Back to home</button></a>
 
 
 

@@ -43,7 +43,7 @@ $check = "select * from user where ph_no=$mobile";
     {
 
         //Your authentication key
-        $authKey = "150002AZFP9V8Yh58fcf044";
+        $authKey = "150911ANQ7tLF7590816d3";
         
 
 //Multiple mobiles numbers separated by comma

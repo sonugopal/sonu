@@ -30,3 +30,6 @@ body{
     color: #fff;
     margin-top: 5px;
 }
+#load{
+    display: none;
+}
