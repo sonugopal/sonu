@@ -26,20 +26,20 @@ include "connectdb.php"
     <body>
         <nav class="nav side">
             <div class="container">
-            <br>
-            <br>
-            <a href="login.php"><button class="btn btn-primary" id="log_in">Admin login</button></a>
-            <div class="row">
-                <form action="user_login.php" method="post">
-                    <h5 style="color:white">You can delete your contact detail from list</h5>
-                    <input type="number" name="ph" class="form-control" placeholder="Enter Mobile number">
-                    <br>
-                    
-                    <button type="submit" name="enter" class="btn btn-danger">Enter</button>
-                </form>
+                <br>
+                <br>
+                <a href="login.php"><button class="btn btn-primary" id="log_in">Admin login</button></a>
+                <div class="row">
+                    <form action="user_login.php" method="post">
+                        <h5 style="color:white">You can delete your contact detail from list</h5>
+                        <input type="number" name="ph" class="form-control" placeholder="Enter Mobile number">
+                        <br>
+
+                        <button type="submit" name="enter" class="btn btn-danger">Enter</button>
+                    </form>
+                </div>
             </div>
-            </div>
-            
+
 
         </nav>
         <section class="canvas-wrap">
@@ -50,7 +50,7 @@ include "connectdb.php"
                     </div>
 
                     <div class="col-xs-7">
-                        <h1 id="name"><b>DhishaLifeDrops</b></h1>
+                        <h1 id="name">Dhisha Life Drops</h1>
                     </div>
                     <div class="col-xs-2">
                         <img src="img/logo2.png" id="logo">
@@ -59,7 +59,7 @@ include "connectdb.php"
                 </div>
                 <div class="row">
                     <div class="col-xs-12 text-center">
-                        <p id="para">Don't be terrible about life drops, The all donors in kerala ready to help you, you can find them at anywhere</p>
+                        <p id="para">Blood donation wing of Dhisha (reg:294/2015)<br>Are you in need of blood? We are here to help you</p>
 
                     </div>
                 </div>
@@ -68,14 +68,14 @@ include "connectdb.php"
                         <div class="col-xs-12">
                             <form action="donors.php" method="post" class="find">
                                 <br>
-                                
-                                
-                                <h3>Find donor</h3>
-                                    
-                                    
+
+
+                                <h4>Find donor</h4>
+
+
                                 <div class="form-group" >
 
-                                    
+
                                     <select name="blood" class="form-control b_align" id="group" required>
                                         <option value="">  --Select Group--</option>
 
@@ -94,8 +94,8 @@ include "connectdb.php"
                                 </div>
 
                                 <div class="form-group" id="town">
-                                    
-                                    <select name="district" class="form-control" id="district" required>
+
+                                    <select name="district" class="form-control" id="home_dist" required>
                                         <option value="">--Select district--</option>
 
                                         <?php
@@ -123,7 +123,7 @@ include "connectdb.php"
                                 </div>
 
                                 <div class="form-group" id="town" >
-                                    
+
                                     <select name="townlist" class="form-control" id="townlist" required>
                                         <option value="">--Select Town--</option>
 
@@ -132,14 +132,14 @@ include "connectdb.php"
 
 
                                 </div>
-                                
-                                <button name="submit" type="submit" class="btn btn-success" >Find Donors</button>
+
+                                <button name="submit" type="submit" class="btn btn-success" >Search</button>
                                 <br>
                                 <br>
                             </form>
                             <br>
                             <br>
-                            
+
 
                         </div>
                     </div>
@@ -148,21 +148,24 @@ include "connectdb.php"
                 </div>
                 <div class="row text-center marg">
                     <div class="col-xs-12">
-                        <p>Give life drops to people to become a hero<br>Do you interested?</p>
-                        <a href="reg.php"><button name="submit" type="submit" class="btn btn-danger" >Be a donor</button></a>
-                         
+                        <p>
+                            Donate blood and save life<br>
+                            would you like to be a life saving donor?</p>
+                        <a href="reg.php"><button name="submit" type="submit" class="btn btn-danger" >Register</button></a>
+
                     </div>
                 </div
                 <div class="row" id="marg">
-                    
+
                     <div class="col-xs-12 text-center" id="details">
-                        
+                        <a href="https://www.facebook.com/search/top/?q=dhisha%20kerala"><p>dhishakerala@facebook.com</p></a>
                         <p>dhishalifedrops@gmail.com</p>
                         <p>Mob:7736239097,9400630581</p>
-                        <a href="https://www.facebook.com/search/top/?q=dhisha%20kerala"><p>dhishakerala@facebook.com</p></a>
+
                     </div>
                     <div class="row">
                         <a href="https://msg91.com/startups/?utm_source=startup-banner"><img src="https://msg91.com/images/startups/msg91Badge.png" width="120" height="90" title="MSG91 - SMS for Startups" alt="Bulk SMS - MSG91"></a>
+
                     </div>
                 </div>
 

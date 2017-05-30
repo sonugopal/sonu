@@ -11,7 +11,14 @@ if (isset($_POST['submit'])) {
 }
 ?>
 <?php
-$b_query = "select * from user where town_id=$town && group_id=$blood && dist_id=$district";
+if($town=='any'){
+    $b_query = "select * from user where dist_id=$district && group_id=$blood";
+    
+}
+else{
+    $b_query = "select * from user where town_id=$town && group_id=$blood && dist_id=$district";
+}
+
 $result = mysqli_query($conn, $b_query);
 ?>
 <!DOCTYPE html>
@@ -91,13 +98,13 @@ $result = mysqli_query($conn, $b_query);
                     </div>
 
 
-                </div>
+                </div
+        </section>>
 
 
             </div>
             <div id="canvas" class="gradient"></div>
 
-        </section>
         <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
         <script src="js/jquery.slideandswipe.min.js" type="text/javascript"></script>
 

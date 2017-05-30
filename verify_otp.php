@@ -43,7 +43,7 @@ $check = "select * from user where ph_no=$mobile";
     {
 
         //Your authentication key
-        $authKey = "150911ANQ7tLF7590816d3";
+        $authKey = "154042AQlw3WgoKbpt5929ad7a";
         
 
 //Multiple mobiles numbers separated by comma
@@ -102,13 +102,16 @@ $check = "select * from user where ph_no=$mobile";
         curl_close($ch);
     
 
-if($output!=0){
-    header('location:register.php');
-    
-}
-else
+if($output==0){
     echo 'Something went wrong..'
     . 'Try again';
+   
+    
+}
+else{
+     header('location:register.php');
+}
+    
     }
 ?>
 </body>

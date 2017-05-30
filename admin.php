@@ -49,6 +49,7 @@ if (!isset($_SESSION['password'])) {
                             $num=mysqli_num_rows($total);
                             echo '<h5>Total Donors:'.$num.'</h5>';
                             ?>
+                            <a href="admin.php" style="color: #fff"><h5>Refresh</h5></a>
                         </div>
                         <br>
                         
